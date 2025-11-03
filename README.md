@@ -1,5 +1,10 @@
 # AutomatedMenu-AzureOpenAI-MCP-AzureContainerApps
 ## N.B. Important - This is for testing in a lab environment (not for Production)
+### What the lab produces
+- The lab will create a public facing 'frontend' web app where a prompt is used to ask for information related to Microsoft Docs.
+- The web app will utilise a MCP server which searches Microsoft Docs for an answer.
+- The result of the search is sent an OpenAI Model to assimulate an answer.
+
 ### Requirements
 - Command Prompt with Powershell
   - Az Cli (able to run within Powershell)
@@ -21,11 +26,6 @@
       - Azure Container App (ACA)
         - A Dockerfile is used to build an image, pushed to ACR, and used by the ACA
         - N.B. An Azure Log Analytics Workspace will also be created
-
-### What the lab produces
-- The lab will create a public facing 'frontend' web app where a prompt is used to ask for information related to Microsoft Docs.
-- The web app will utilise a MCP server which searches Microsoft Docs for an answer.
-- The result of the search is sent an OpenAI Model to assimulate an answer.
 
 ### Directions
 - Choose a Powershell command prompt that can also call AzCli, e.g. Azure Cloud Shell
