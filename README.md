@@ -29,7 +29,7 @@
         - N.B. An Azure Log Analytics Workspace will also be created
 
 ### Directions
-- Choose a Powershell command prompt that can also call AzCli, e.g. Azure Cloud Shell
+- Choose a Powershell command prompt that can also call AzCli and Docker Client, e.g. Azure Cloud Shell
 - Download the repo, e.g.
 ```bash
 git clone https://github.com/oneqi/AutomatedMenu-AzureOpenAI-MCP-AzureContainerApps.git
