@@ -19,6 +19,7 @@
       - Azure Container Registry (ACR)
       - Azure Container App (ACA)
         - A Dockerfile is used to build an image, pushed to ACR, and used by the ACA
+        - N.B. An Azure Log Analytics Workspace will also be created
 
 ### What the lab produces
 - The lab will create a public facing 'frontend' web app where a prompt is used to ask for information related to Microsoft Docs.

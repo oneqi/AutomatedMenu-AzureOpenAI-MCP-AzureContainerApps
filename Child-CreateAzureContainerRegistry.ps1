@@ -1,9 +1,12 @@
 # Creating Azure Container Registry
-$WarningPreference = 'SilentlyContinue'
+#$WarningPreference = 'SilentlyContinue'
 # $WarningPreference = 'Continue'
 
 Write-Host "`nCreating Azure Container Registry (ACR) ..." -ForegroundColor Cyan
-$acrResource = New-AzContainerRegistry -ResourceGroupName $resourceGroup -Name $acrName -Sku Basic -Location $location
+$acrResource = New-AzContainerRegistry -ResourceGroupName $resourceGroup `
+                                       -Name $acrName `
+                                       -Sku Basic `
+                                       -Location $location > $null
 if ($LASTEXITCODE -eq 0) {
 Write-Host "Azure Container Registry $($acrResource.Name) created successfully in resource group $($acrResource.ResourceGroupName)." -ForegroundColor Green
 }
@@ -29,4 +32,4 @@ $global:acrUsername = $acrUsername
 $global:acrPassword = $acrPassword
 Write-Host "Exported configuration variables:" -ForegroundColor Cyan
 Write-Host "Azure Container Registry setup completed." -ForegroundColor Green
-$WarningPreference = 'Continue'
+#$WarningPreference = 'Continue'

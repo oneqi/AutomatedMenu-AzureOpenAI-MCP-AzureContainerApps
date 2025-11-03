@@ -11,9 +11,9 @@ do {
     Write-Host "2. Check Azure OpenAI Model Availability" -ForegroundColor Yellow
     Write-Host "3. Set project variables" -ForegroundColor Yellow
     Write-Host "4. Create Resource Group" -ForegroundColor Yellow
-    Write-Host "5. Create Azure OpenAI" -ForegroundColor Yellow
+    Write-Host "5. Create Azure OpenAI plus Model" -ForegroundColor Yellow
     Write-Host "6. Create Azure Container Registry" -ForegroundColor Yellow
-    Write-Host "7. Create Azure Container App for Chat with MCP for MS Learn" -ForegroundColor Yellow
+    Write-Host "7. Create Azure ContainerApp for Chat with MCP for MS Learn" -ForegroundColor Yellow
     Write-Host "Q. Quit" -ForegroundColor Yellow
     $scriptNumber = Read-Host -Prompt "Enter the number of the child script to run or 'Q' to quit"
     switch ($scriptNumber) {

@@ -26,7 +26,7 @@ do {
     Write-Host "Azure Region:                            $location"
     Write-Host "Resource Group:                          $resourceGroup"
     Write-Host "Azure Container Registry Name:           $acrName"
-    Write-Host "Azure Container App Environment Name:    $acaEnvName"
+    Write-Host "Azure ContainerApp Environment Name:     $acaEnvName"
     Write-Host "Azure OpenAI Instance Name:              $aoaiName"
     Write-Host "Frontend App:                            $frontendApp"
     Write-Host ""

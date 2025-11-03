@@ -13,7 +13,7 @@ if ($LASTEXITCODE -eq 0) {
 Write-Host "Docker image '${frontendApp}:v1' built and pushed to ACR successfully." -ForegroundColor Green
 }
 
-Write-Host "N.B. You may need to update 'az containerapp !" -ForegroundColor Magenta
+Write-Host "`nN.B. You may need to update 'az containerapp' !" -ForegroundColor Magenta
 Write-Host "az extension add --name containerapp --upgrade" -ForegroundColor Magenta
 # Creating Container App Environment
 Write-Host "`nCreating Container App Environment..." -ForegroundColor Cyan
