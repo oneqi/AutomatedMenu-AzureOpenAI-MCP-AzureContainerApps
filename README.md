@@ -8,6 +8,7 @@
 ### Requirements
 - Command Prompt with Powershell
   - Az Cli (able to run within Powershell)
+  - Docker (Client)
 
 ### How the 'Automated Menu' works
 - The script outputs a menu which is numbered, so you can select which option you require or quit out of the script
