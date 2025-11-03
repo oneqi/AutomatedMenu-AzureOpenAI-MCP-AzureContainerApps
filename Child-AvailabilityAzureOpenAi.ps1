@@ -23,8 +23,8 @@ do {
   } else {
       Write-Host "Model '$azureOpenAIModel' is NOT available in region '$location'." -ForegroundColor Red
   }
-  Write-Host "This script only deploys models with 'Standard' SKU.
-  `If it is NOT listed please choose a different region, press 'N' and choose a different region ..." -ForegroundColor Red
+  Write-Host "This script only deploys models with 'Standard' SKU. If it is NOT listed please choose a different region." -ForegroundColor Red
+  Write-Host "Press 'N' and choose a different region ..." -ForegroundColor Red
 
   write-Host "`nIf you are not happy with the details press N and the script will re-run ..." -ForegroundColor Cyan
   $confirmation = Read-Host "Are you happy with these details? (Y/N)"

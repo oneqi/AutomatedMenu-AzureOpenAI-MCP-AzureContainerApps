@@ -18,11 +18,11 @@ do {
     $scriptNumber = Read-Host -Prompt "Enter the number of the child script to run or 'Q' to quit"
     switch ($scriptNumber) {
         '1' {
-            Write-Host "`nStarting Prompt detection, Azure login and subscription selection..." -ForegroundColor Cyan
+            Write-Host "Starting Prompt detection, Azure login and subscription selection..." -ForegroundColor Cyan
             . "$PSScriptRoot\Child-AzureLogin.ps1"
         }
         '2' {
-            Write-Host "`nChecking Azure Model availability via OpenAI..." -ForegroundColor Cyan
+            Write-Host "Checking Azure Model availability via OpenAI..." -ForegroundColor Cyan
             . "$PSScriptRoot\Child-AvailabilityAzureOpenAi.ps1"
         }
         '3' {
@@ -34,15 +34,15 @@ do {
             . "$PSScriptRoot\Child-CreateResourceGroup.ps1"
         }
         '5' {
-            Write-Host "`nStarting AI resource creation..." -ForegroundColor Cyan
+            Write-Host "Starting AI resource creation..." -ForegroundColor Cyan
             . "$PSScriptRoot\Child-CreateAzureOpenAI.ps1"
         }
         '6' {
-            Write-Host "`nStarting Azure Container Registry creation..." -ForegroundColor Cyan
+            Write-Host "Starting Azure Container Registry creation..." -ForegroundColor Cyan
             . "$PSScriptRoot\Child-CreateAzureContainerRegistry.ps1"
         }
         '7' {
-            Write-Host "`nStarting Azure MCP Chat with MS Learn creation..." -ForegroundColor Cyan
+            Write-Host "Starting Azure MCP Chat with MS Learn creation..." -ForegroundColor Cyan
             . "$PSScriptRoot\Child-WebMCPAzureDocs.ps1"
         }
         'Q' { Write-Host "Exiting the script." -ForegroundColor Yellow }

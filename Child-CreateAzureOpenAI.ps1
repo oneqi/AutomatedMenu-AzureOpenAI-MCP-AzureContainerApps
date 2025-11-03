@@ -1,5 +1,5 @@
 # Create Azure OpenAI Instance
-Write-Host "`nCreating Azure OpenAI Instance..." -ForegroundColor Cyan
+Write-Host "Creating Azure OpenAI Instance..." -ForegroundColor Cyan
 az cognitiveservices account create `
   --name $aoaiName `
   --resource-group $resourceGroup `

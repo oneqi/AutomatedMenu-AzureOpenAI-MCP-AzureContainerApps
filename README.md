@@ -6,14 +6,15 @@
 
 ### How the 'Automated Menu' works
 - The script outputs a menu which is numbered, so you can select which option you require or quit out of the script
-  - 1. The script will detect which of the following environments it is running in;
+  - [1] The script will detect which of the following environments it is running in;
     - Azure Cloud Shell
     - Windows Powershell Prompt
     - WSL with pwsh
     - Docker container
       - Once the environment is detected, it will then log you into Azure using your TenantID as an input
-  - 2. You will then be able to check which Azure region has a 'Standard' SKU of the OpenAI Model you wish to work with
-  - 3. Once the region is choosen, you can then choose a project name that will used in the resource names that are created (some will have to be globally unique)
+        - This is not applicable to Azure Cloud Shell
+  - [2] You will then be able to check which Azure region has a 'Standard' SKU of the OpenAI Model you wish to work with
+  - [3] Once the region is choosen, you can then choose a project name that will used in the resource names that are created (some will have to be globally unique)
     - Using the project name, the following resources can be selected to be created
       - Resource Group
       - Azure Container Registry (ACR)
