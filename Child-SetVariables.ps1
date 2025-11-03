@@ -1,14 +1,15 @@
 do {
 
+    # Ask for Azure Region
+    $location = Read-Host -Prompt "Enter Azure region (e.g., westeurope, eastus)"
     # Ask for Azure OpenAI Model
     $azureOpenAIModel = Read-Host -Prompt "Enter the Azure OpenAI Model to deploy (e.g., gpt-4o, gpt-35-turbo)"
     # Ask for AI OpenAI Model Version
     $azureOpenAIModelVersion = Read-Host -Prompt "Enter the Azure OpenAI Model Version to deploy (e.g., 2024-05-13, 2024-02-15)"
-    # Ask for project name and region
+    # Ask for project name
     $projectName = Read-Host -Prompt "Enter a unique project name with NO spaces, underscores, etc, e.g. projectx901"
-    #$projectName = $projectName.ToLower().Replace(" ", "-")
     $projectName = $projectName.ToLower()
-    $location = Read-Host -Prompt "Enter Azure region (e.g., westeurope, eastus)"
+
 
     # Derived resource names
     $azureOpenAIModel = $azureOpenAIModel.ToLower()
@@ -25,9 +26,9 @@ do {
     Write-Host "Project Name:                            $projectName"
     Write-Host "Azure Region:                            $location"
     Write-Host "Resource Group:                          $resourceGroup"
+    Write-Host "Azure OpenAI Instance Name:              $aoaiName"
     Write-Host "Azure Container Registry Name:           $acrName"
     Write-Host "Azure ContainerApp Environment Name:     $acaEnvName"
-    Write-Host "Azure OpenAI Instance Name:              $aoaiName"
     Write-Host "Frontend App:                            $frontendApp"
     Write-Host ""
 
@@ -55,8 +56,8 @@ Write-Host "Variable "(Get-Variable -Name azureOpenAIModelVersion).Name" = '$($g
 Write-Host "Variable "(Get-Variable -Name projectName).Name"             = '$($global:projectName)'" -ForegroundColor Yellow
 Write-Host "Variable "(Get-Variable -Name location).Name"                = '$($global:location)'" -ForegroundColor Yellow
 Write-Host "Variable "(Get-Variable -Name resourceGroup).Name"           = '$($global:resourceGroup)'" -ForegroundColor Yellow
+Write-Host "Variable "(Get-Variable -Name aoaiName).Name"                = '$($global:aoaiName)'" -ForegroundColor Yellow
 Write-Host "Variable "(Get-Variable -Name acrName).Name"                 = '$($global:acrName)'" -ForegroundColor Yellow
 Write-Host "Variable "(Get-Variable -Name acaEnvName).Name"              = '$($global:acaEnvName)'" -ForegroundColor Yellow
-Write-Host "Variable "(Get-Variable -Name aoaiName).Name"                = '$($global:aoaiName)'" -ForegroundColor Yellow
 Write-Host "Variable "(Get-Variable -Name frontendApp).Name"             = '$($global:frontendApp)'" -ForegroundColor Yellow
 Write-Host "Project variable setup completed." -ForegroundColor Green
